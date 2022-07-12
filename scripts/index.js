@@ -89,11 +89,5 @@ function likeCard (card) {
 function delCard (card) {
   card.remove();
 }
-function openPopupImg (title, src) {
-  popupImgPic.src = src;
-  popupImgPic.alt = title;
-  popupImgCaption.textContent = title;
-  openPopup(popupImg);
-}
 
 samplesCards.forEach(el => addNewCard(createCard(el.title, el.src)));
