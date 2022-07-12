@@ -10,7 +10,6 @@ const popupCardName = document.querySelector('.popup__input_type_card-name');
 const popupCardUrl = document.querySelector('.popup__input_type_card-url');
 const popupImg = document.querySelector('.popup_type_image');
 const popupImgPic = popupImg.querySelector('.card-image__img');
-const popupImgCaption = popupImg.querySelector('.card-image__caption');
 const sectionCards = document.querySelector('.cards');
 const cardTemplate = document.querySelector('#card').content;
 const popups = document.querySelectorAll('.popup');
@@ -28,7 +27,7 @@ function createCard(title, src) {
   const cardImg = card.querySelector('.card__img');
   cardImg.src = src;
   cardImg.alt = title;
-  cardImg.addEventListener('click', () => openPopupImg(title, src));
+
   card.querySelector('.card__like').addEventListener('click', () => likeCard(card));
   return card;
 }
@@ -68,19 +67,6 @@ popupProfile.addEventListener('submit', evt => {
   profileName.textContent = popupProfileName.value;
   profileAbout.textContent = popupProfileAbout.value;
   closePopup(popupProfile);
-});
-
-btnAddCard.addEventListener('click', () => {
-  popupCardName.value = '';
-  popupCardUrl.value = '';
-  openPopup(popupAddCard);
-});
-
-popupAddCard.addEventListener('submit', evt => {
-  evt.preventDefault();
-  const card = createCard(popupCardName.value, popupCardUrl.value);
-  addNewCard(card);
-  closePopup(popupAddCard);
 });
 
 function likeCard (card) {
