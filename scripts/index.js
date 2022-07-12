@@ -30,15 +30,11 @@ function createCard(title, src) {
   cardImg.alt = title;
   cardImg.addEventListener('click', () => openPopupImg(title, src));
   card.querySelector('.card__like').addEventListener('click', () => likeCard(card));
-  card.querySelector('.card__del').addEventListener('click', () => delCard(card));
   return card;
 }
 
 function addNewCard(card) {
   sectionCards.prepend(card);
-}
-function delCard(card) {
-  card.remove();
 }
 
 function closePopupHandler (evt) {
