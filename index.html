@@ -3,66 +3,92 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./pages/index.css">
-  <title>MESTO</title>
+  <link rel=" stylesheet" href="./pages/index.css">
+  <title>Mesto</title>
 </head>
 
 <body class="page">
-    <header class="header page__section">
-      <img src="./images/logo.svg" alt="Логотип Место Россия." class="logo">
-    </header>
+  <header class="header">
+    <img class="header__logo" src="./image/header/image.svg" alt="Логотип">
+  </header>
 
-    <main class="content">
-      <section class="profile page__section">
-        <img src="./images/profile__user-pic.webp" alt="Картинка профиля." class="profile__user-pic">
-        <div class="profile__user-info-box">
-          <h1 class="profile__name">Жак-Ив Кусто</h1>
-          <button type="button" class="profile__edit-btn" aria-label="Рекдатировать профиль."></button>
-          <div class="popup popup_type_profile-edit">
-            <div class="popup__window">
-              <h3 class="popup__title">Редактировать профиль</h3>
-              <form class="popup__form" name="user-form" autocomplete="off">
-                <input type="text" class="popup__input popup__input_type_name" name="input-name" placeholder="Имя" required>
-                <input type="text" class="popup__input popup__input_type_about" name="input-about" placeholder="О себе">
-                <button class="popup__submit-btn" type="submit">Сохранить</button>
-              </form>
-              <button class="popup__close-btn" type="button" aria-label="Закрыть форму."></button>
-            </div>
-          </div>
-          <p class="profile__about">Исследователь океана</p>
-        </div>
-        <button type="button" class="profile__add-card" aria-label="Добавить карточку."></button>
-        <div class="popup popup_type_add-card"></div>
-      </section>
-      <section class="cards page__section" aria-label="Места.">
-      </section>
-      <div class="popup popup_type_image">
-        <div class="card-image">
-          <figure class="card-image__box">
-            <img class="card-image__img" src="./" alt="">
-          </figure>
-        </div>
+  <main class="content">
+    <section class="profile">
+      <img class="profile__image" src="./image/profile/__image.jpg" alt="Кусто">
+      <div class="profile__info">
+        <h1 class="profile__name">Жак-Ив Кусто</h1>
+        <p class="profile__text">Исследователь океана</p>
+        <button type="button" class="profile__edit-button"></button>
       </div>
-    </main>
+      <button type="button" class="profile__add-button">
+      </button>
+    </section>
 
-    <footer class="footer page__section">
-      <p class="footer__text">
-        © 2022 Mesto Russia
-      </p>
-    </footer>
+    <section class="cards">
+      <ul class="cards__item">
+        <li class="card">
+          <img class="card__image" src="./image/elements/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск">
+          <div class="card__description">
+            <h2 class="card__title">Карачаевск</h2>
+            <button class="card__like" type="button">нравится</button>
+          </div>
+        </li>
+        <li class="card">
+          <img class="card__image" src="./image/elements/kirill-pershin-1404681-unsplash.png" alt="Эльбрус">
+          <div class="card__description">
+            <h2 class="card__title">Гора Эльбрус</h2>
+            <button class="card__like">нравится</button>
+          </div>
+        </li>
+        <li class="card">
+          <img class="card__image" src="./image/elements/kirill-pershin-1556355-unsplash.png" alt="Домбай">
+          <div class="card__description">
+            <h2 class="card__title">Домбай</h2>
+            <button class="card__like">нравится</button>
+          </div>
+        </li>
+        <li class="card">
+          <img class="card__image" src="./image/elements/kirill-pershin-1404681-unsplash.png" alt="Эльбрус">
+          <div class="card__description">
+            <h2 class="card__title">Гора Эльбрус</h2>
+            <button class="card__like">нравится</button>
+          </div>
+        </li>
+        <li class="card">
+          <img class="card__image" src="./image/elements/kirill-pershin-1556355-unsplash.png" alt="Домбай">
+          <div class="card__description">
+            <h2 class="card__title">Домбай</h2>
+            <button class="card__like">нравится</button>
+          </div>
+        </li>
+        <li class="card">
+          <img class="card__image" src="./image/elements/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск">
+          <div class="card__description">
+            <h2 class="card__title">Карачаево-Черкессия</h2>
+            <button class="card__like">нравится</button>
+          </div>
+        </li>
+      </ul>
+    </section>
 
-    <template id="card">
-      <article class="card">
-        <img src="./" alt="" class="card__img">
-        <h2 class="card__title"></h2>
-        <button class="card__like" type="button" aria-label="Нравится."></button>
-      </article>
-    </template>
+  </main>
+  <footer class="footer">
+    <p class="footer__copyright">&copy; © 2022 Mesto Russia</p>
+  </footer>
+  <div class="popup">
+    <div class="popup__container">
+      <button class="popup__closed" type="button" aria-label="Закрыть"></button>
+      <h2 class="popup__title">Редактировать профиль</h2>
+      <form class="popup__form" name="form" method="post" action="#">
+        <input class="popup__input popup__input_name" name="user" required type="text" placeholder="Имя">
+        <input class="popup__input popup__input_profession" name="job" required type="text" placeholder="Профессия">
+        <button class="popup__submit-btn" type="submit">Сохранить</button>
+      </form>
+    </div>
+  </div>
 
-    <script src="./scripts/cards.js"></script>
-    <script src="./scripts/index.js"></script>
+  <script src="./scripts/script.js"></script>
 </body>
 
 </html>
