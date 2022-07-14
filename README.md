@@ -14,4 +14,4 @@
 Применяются новые технологии: JavaScript
 Реализовано открытие поп-апов и анимация лайков.
 
-Сылка на проект:  https://doraaquadora.github.io/mesto/
+Сылка на проект: https://doraaquadora.github.io/mesto/
