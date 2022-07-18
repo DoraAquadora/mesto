@@ -1,0 +1,6 @@
+.card__like_active:active {
+  background-image: url(../../../../image/elements/__like-active.svg);
+  opacity: 1;
+}
+
+
