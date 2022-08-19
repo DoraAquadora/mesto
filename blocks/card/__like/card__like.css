@@ -1,19 +1,14 @@
 .card__like {
-  font-size: 0;
-  background-image: url(../../../image/elements/__like.svg);
   width: 22px;
-  min-height: 19px;
-  border: none;
-  background-color: white;
-  transition: 0.3s ease;
+  height: 19px;
+  margin-right: 20px;
+  background-image: url(../../../images/Vector.png);
   cursor: pointer;
+  border: none;
+  background-color: transparent;
   padding: 0;
 }
 
 .card__like:hover {
-  opacity: 0.5;
+  opacity: .5;
 }
-
-
-
-
