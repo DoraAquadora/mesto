@@ -14,5 +14,5 @@
 Добавлены новые попапы, реализована возможность лайков и удаления карточек.
 Использовался - JS.
 
-Сылка на проект: https://doraaquadora.github.io/mesto/
+Сылка на проект:  https://doraaquadora.github.io/mesto/
 
