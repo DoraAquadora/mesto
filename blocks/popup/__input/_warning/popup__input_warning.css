@@ -1,0 +1,17 @@
+.popup__input_warning{
+  margin-left: 0;
+  margin-top: 5px;
+  margin-bottom: 13px;
+  font-family: 'Inter', 'Verdana', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14.5px;
+  color: #FF0000;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.popup__input_warning:last-of-type{
+  margin-bottom: 30px;
+}
