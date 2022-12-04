@@ -1,8 +1,8 @@
-const samplesCards = [
-  { title: 'Горная река', src: './images/mask1.png' },
-  { title: 'Зеленая долина', src: './images/mask2.png' },
-  { title: 'Черно-белый массив', src: './images/mask3.png' },
-  { title: 'Эффект пленки', src: './images/mask4.png' },
-  { title: 'Скалистые горы', src: './images/mask5.png' },
-  { title: 'Мечта альпиниста', src: './images/mask6.png' }
-]
+export const samplesCards = [
+  { name: 'Горная река', link: './images/mask1.png' },
+  { name: 'Зеленая долина', link: './images/mask2.png' },
+  { name: 'Черно-белый массив', link: './images/mask3.png' },
+  { name: 'Эффект пленки', link: './images/mask4.png' },
+  { name: 'Скалистые горы', link: './images/mask5.png' },
+  { name: 'Мечта альпиниста', link: './images/mask6.png' }
+];

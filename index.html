@@ -41,12 +41,12 @@
       <h3 class="popup__title">Редактировать профиль</h3>
       <form class="popup__form popup__form_type_profile" name="user-form" autocomplete="off" novalidate>
         <input type="text" class="popup__input popup__input_type_name" name="input-name" placeholder="Имя" minlength="2" maxlength="40" id="name-input"  required>
-        <span class="popup__input-warning name-input-error"></span>
+        <span id="GET-name-error" class="popup__input-warning name-input-error"></span>
         <input type="text" class="popup__input popup__input_type_about" name="input-about" placeholder="О себе" minlength="2" maxlength="200"  id="interest-input" required>
-        <span class="popup__input-warning interest-input-error"></span>
+        <span  id="GET-job-error" class="popup__input-warning interest-input-error"></span>
         <button class="popup__submit-btn popup__submit-btn_profile" type="submit">Сохранить</button>
       </form><!-- Кнопка закрытия для всех -->
-      <button class="popup__close-btn" type="button" aria-label="Закрыть форму."></button>
+      <button class="popup__close-btn popup-profile__close" type="button" aria-label="Закрыть форму."></button>
     </div>
   </div>
     <!-- Попап карточек -->
@@ -55,12 +55,12 @@
       <h3 class="popup__title">Новое место</h3>
       <form class="popup__form popup__form_type_card" name="card-form" autocomplete="off" novalidate>
         <input type="text" class="popup__input popup__input_type_card-name" name="input-card-name" placeholder="Название" minlength="2" maxlength="30" id="place-input" required>
-        <span class="popup__input-warning place-input-error"></span>
+        <span id="GET-title-error"  class="popup__input-warning place-input-error"></span>
         <input type="url" class="popup__input popup__input_type_card-url" name="input-card-url" placeholder="Ссылка на картинку" id="href-input" required>
-        <span class="popup__input-warning href-input-error"></span>
+        <span id="errorwarning" class="popup__input-warning href-input-error"></span>
         <button class="popup__submit-btn popup__submit-btn_place" type="submit">Создать</button>
       </form><!-- Кнопка закрытия для всех -->
-      <button class="popup__close-btn" type="button" aria-label="Закрыть форму."></button>
+      <button class="popup__close-btn popup-add__close"  type="button" aria-label="Закрыть форму."></button>
     </div>
   </div>
        <!-- Рендор карточек -->
@@ -71,11 +71,11 @@
         <figcaption class="card-image__caption"></figcaption>
       </figure>
       <!-- Кнопка закрытия для всех -->
-      <button class="popup__close-btn" type="button" aria-label="Закрыть форму."></button>
+      <button class="popup__close-btn  popup-rendor__close" type="button" aria-label="Закрыть форму."></button>
     </div>
   </div>
     <!-- Сами карточки -->
-  <template id="card">
+  <template class="element-template">
     <article class="card">
       <img src="./" alt="" class="card__img">
       <h2 class="card__title"></h2>
@@ -84,9 +84,8 @@
     </article>
   </template>
 
-  <script src="./scripts/cards.js"></script>
-  <script src="./scripts/index.js"></script>
-  <script src="./scripts/validate.js"></script>
+ <script type="module" src="./scripts/index.js"  defer ></script>
+
 </body>
 
 </html>
