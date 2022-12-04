@@ -4,7 +4,7 @@ import {samplesCards} from "../scripts/cards.js"
 
 const buttonOpenProf = document.querySelector('.profile__edit-btn');// кнопка открытия профиля
 const popupProfile = document.querySelector('.popup_type_profile-edit');// сам попап профиля
-const popupProfileClose = document.querySelector('.popup-profile__close');//ЗАКРЫТЬ
+const popupProfileClose = document.querySelector('.popup__profile-close');//ЗАКРЫТЬ
 
 const popupProfileName = popupProfile.querySelector('.popup__input_type_name');
 const popupProfileInfo = popupProfile.querySelector('.popup__input_type_about');
@@ -13,10 +13,10 @@ const profileAbout = document.querySelector('.profile__about');
 
 const popupAddCard = document.querySelector('.popup_type_add-card');// сам попап
 const buttonAddCard = document.querySelector('.profile__add-card');// Кнопка карточек
-const popupCardClose = document.querySelector('.popup-add__close');//ЗАКРЫТЬ
+const popupCardClose = document.querySelector('.popup__add-close');//ЗАКРЫТЬ
 
 export const popupImg = document.querySelector('.popup_type_image');
-const popupRendorClose = document.querySelector('.popup-rendor__close')//ЗАКРЫТЬ
+const popupRendorClose = document.querySelector('.popup__rendor-close')//ЗАКРЫТЬ
 
 const sectionCards = document.querySelector('.cards');
 const popupCardName = document.querySelector('.popup__input_type_card-name');
