@@ -1,8 +1,10 @@
 export class FormValidator {
-  constructor(settings, form) {
+  constructor(settings, form, buttonSubmitAddCardForm) {
       this._form = form;
       this._settings = settings;
+      this._buttonSubmitAddCardForm = buttonSubmitAddCardForm;
       this._currentButton = form.querySelector(this._settings.submitButtonSelector);
+
   }
   enableValidation() {
       this._setEventListeners();
@@ -10,9 +12,10 @@ export class FormValidator {
   disableButton(button) {
       button.setAttribute('disabled', true);
       button.classList.add(this._settings.inactiveButtonClass);
+
   }
   _setEventListeners() {
-      this._form.addEventListener('input', () => {
+          this._form.addEventListener('input', () => {
           this._validateInput(event);//ffffffffffff
       });
   }

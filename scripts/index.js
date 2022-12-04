@@ -24,14 +24,14 @@ const popupCardUrl = document.querySelector('.popup__input_type_card-url');
 export const popupImgCaption = popupImg.querySelector('.card-image__caption');
 export const popupImgPic = popupImg.querySelector('.card-image__img');
 
-const buttonSubmitAddCardForm = document.querySelector('.popup__submit-btn_place');
+const buttonSubmitAddCardForm = document.querySelector('.popup__submit-place');
 
 const formProfile = document.querySelector('.popup__form_type_profile');// ФОРМА
 const formCard = document.querySelector('.popup__form_type_card'); //ФОРМА
 
 const popups = document.querySelectorAll('.popup');
 
-const Validation = {
+const validation = {
   formSelector: '.popup__form',
   inputSelector: '.popup__input',
   submitButtonSelector: '.popup__submit-btn',
@@ -40,8 +40,8 @@ const Validation = {
   errorClass: 'popup__input_error_active'
 };
 
-const profileValidatorEdit = new FormValidator(Validation, formProfile);
-const cardValidatorAdd = new FormValidator(Validation, formCard);
+const profileValidatorEdit = new FormValidator(validation, formProfile);
+const cardValidatorAdd = new FormValidator(validation, formCard);
 
 profileValidatorEdit.enableValidation();
 cardValidatorAdd.enableValidation();
@@ -99,7 +99,7 @@ function openAddCardPopup() {
 
 function closeAddCardPopup() {
   closePopup(popupAddCard);
-  cardValidatorAdd.disableButton( buttonSubmitAddCardForm);//ЗАМЕНА
+  cardValidatorAdd.disableButton(buttonSubmitAddCardForm);//ЗАМЕНА
   formCard .reset();
 }
 
