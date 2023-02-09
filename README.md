@@ -1,4 +1,5 @@
 # Проект: Место
+Проект, позволяющий делиться фотографиями
 
 ### Обзор
 
@@ -7,14 +8,10 @@
 
 **Figma**
 
-* [Ссылка на макет в Figma](https://www.figma.com/file/bjyvbKKJN2naO0ucURl2Z0/JavaScript.-Sprint-5?node-id=0%3A1)
+* [Ссылка на макет в Figma](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)
 
 **Технологии**
-Обновлены и дополнены функции сайта.
-Добавлены новые попапы, реализована возможность лайков и удаления карточек.
-Добавлена валидация.
-Закрытие попапов на оверлэй и esc.
-Использовался - JS.
+Применяются новые технологии: JavaScript
+Реализовано открытие поп-апов и анимация лайков.
 
-Сылка на проект:  https://doraaquadora.github.io/mesto/
-
+Сылка на проект: https://doraaquadora.github.io/mesto/
