@@ -1,3 +1,4 @@
-.popup__image{
-  background: rgb(0, 0, 0, .9);
+.popup__image {
+  max-height: 75vh;
+  max-width: 75vw;
 }

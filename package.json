@@ -1,14 +1,22 @@
 {
   "name": "mesto",
   "version": "1.0.0",
-  "description": "Проект, позволяющий делиться фотографиями",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "rimraf dist && webpack",
     "dev": "webpack serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DoraAquadora/mesto.git"
   },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DoraAquadora/mesto/issues"
+  },
+  "homepage": "https://github.com/DoraAquadora/mesto#readme",
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
