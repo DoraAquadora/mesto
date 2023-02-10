@@ -1,13 +1,13 @@
 import './../pages/index.css';
 import { initialCards } from '../utils/constants.js';
-import { Validate } from '../utils/Validate.js';
+import { validate } from '../utils/validate.js';
 import { Card } from '../components/Card.js';
 import { FormValidator } from '../components/FormValidator.js';
 import { Section } from '../components/Section.js';
 import { PopupWithImage } from '../components/PopupWithImage.js';
 import { PopupWithForm } from '../components/PopupWithForm.js';
 import { UserInfo } from '../components/UserInfo.js';
-import { popupElementProfile, profileButton, formProfile, nameInput, jobInput, popupAddCard, AddCardButton, popupImageRend} from '../utils/components.js';
+import { popupElementProfile, profileButton, formProfile, nameInput, jobInput, popupAddCard, addCardButton, popupImageRend} from '../utils/components.js';
 
 const userInfo = new UserInfo({ nameSelector: '.profile__title', infoSelector: '.profile__profession' });
 
@@ -58,7 +58,7 @@ function handleCardClick(title, image) {
   popupImage.open(title, image);
   };
 
-const popupProfileFormValidator = new FormValidator(Validate, popupElementProfile);
+const popupProfileFormValidator = new FormValidator(validate, popupElementProfile);
 popupProfileFormValidator.enableValidation();
 
 profileButton.addEventListener('click', function () {
@@ -68,10 +68,10 @@ profileButton.addEventListener('click', function () {
   popupProfile.open();
 });
 
-AddCardButton.addEventListener('click', function () {
+addCardButton.addEventListener('click', function () {
   popupCard.open();
   popupCardFormValidator.disableSubmitButton();
 });
 
-const popupCardFormValidator = new FormValidator(Validate, popupAddCard);
+const popupCardFormValidator = new FormValidator(validate, popupAddCard);
 popupCardFormValidator.enableValidation();
