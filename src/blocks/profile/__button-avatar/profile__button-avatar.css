@@ -1,0 +1,10 @@
+.profile__button-avatar{
+   background: url(../../../images/VectorAvatar.svg) no-repeat center;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: 47px;
+    left: 47px;
+    border: 0;
+    z-index: -1;
+}

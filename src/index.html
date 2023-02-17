@@ -12,35 +12,39 @@
     <header class="header">
       <img src="<%=require('./images/logo.svg')%>" alt="Лого, на котором написано Место" class="header__logo">
     </header>
+
     <main class="content">
-      <section class="profile">
+
+      <section class="profile page__profile">
         <div class="profile__description">
-          <img src="<%=require('./images/avatar.jpg')%>" alt="На аватарке изображен человек" class="profile__avatar">
-          <div class="profile__info">
-            <div class="profile__username">
-              <h1 class="profile__title">Жак-Ив Кусто</h1>
-              <button type="button" class="profile__edit-button">
-                <img src="<%=require('./images/vector_edit-button.svg')%>" alt="Знак с ручкой"
-                  class="profile__vector-pencil">
-              </button>
-            </div>
-            <p class="profile__profession">Исследователь океана</p>
+          <div class="profile__avatar-edith">
+          <img src="#" alt="На аватарке изображен человек" class="profile__avatar">
+          <button type="button" class="profile__button-avatar" aria-label="Редактировать аватар."></button>
+        </div>
+          <div class="profile__info"> 
+              <h1 class="profile__title"></h1>
+              <button type="button" class="profile__edit-button" aria-label="Редактировать."></button>
+
+              <p class="profile__profession"></p>
           </div>
         </div>
+
         <button type="button" class="profile__add-button">
           <img src="<%=require('./images/vector_add-button.svg')%>" alt="Знак с плюсом" class="profile__vector-plus">
         </button>
       </section>
       <section class="elements">
         <ul class="cards">
-
         </ul>
       </section>
     </main>
+
     <footer class="footer">
       <p class="footer__copyright">&copy;2022 Mesto Russia</p>
     </footer>
-  </div>
+      </div>
+
+
   <div class="popup popup_type_profile">
     <div class="popup__container">
       <form class="popup__form" name="new" novalidate>
@@ -48,32 +52,40 @@
         <input id="name" name="name" class="popup__input popup__input_type_surname" type="text" value="Жак-Ив Кусто"
           minlength="2" maxlength="40" required placeholder="Имя">
         <span id="name-error" class="error"></span>
-        <input id="professional" name="job" class="popup__input popup__input_type_profession" type="text"
-          value="Исследователь океана" minlength="2" maxlength="200" required placeholder="Вид деятельности">
-        <span id="professional-error" class="error"></span>
-        <button type="submit" class="popup__save-btn">Cохранить</button>
+        <input id="about" name="about" class="popup__input popup__input_type_profession" type="text"
+          value="занятие" minlength="2" maxlength="200" required placeholder="Вид деятельности">
+        <span id="about-error" class="error"></span>
+        <button type="submit" class="popup__save-btn form__button" name="submit_btn" value="Сохранить">Cохранить</button>
       </form>
       <button type="button" class="popup__close-btn"><img src="<%=require('./images/close_icon.svg')%>" alt="Крестик"
           class="popup__img-close-btn"></button>
     </div>
   </div>
+
+
+
+
+
+
   <div class="popup popup_type_add-place">
     <div class="popup__container">
-      <form class="popup__form" novalidate>
+      <form class="popup__form"  name="popup-form-card" novalidate>
         <h2 class="popup__title">Новое место</h2>
-        <input id="card" class="popup__input popup__input_type_place-name" type="place" name="place" minlength="2"
-          maxlength="30" required placeholder="Название">
-        <span id="card-error" class="error"></span>
-        <input id="link" class="popup__input popup__input_type_link" type="url" name="url" required
+        <input id="title-input" class="popup__input popup__input_type_place-name" type="text" name="name" minlength="2"
+          maxlength="30"  placeholder="Название" required>
+        <span id="title-input-error" class="error"></span>
+        <input id="link-input" class="popup__input popup__input_type_link" type="url" name="link" required
           placeholder="Ссылка на картинку">
-        <span id="link-error" class="error"></span>
-        <button type="submit" class="popup__save-btn popup__button">Cоздать</button>
+        <span id="link-input-error" class="error"></span>
+        <button type="submit" class="popup__save-btn form__button" name="submit_btn" value="Сохранить">Сохранить</button>
       </form>
       <button type="button" class="popup__close-btn"><img src="<%=require('./images/close_icon.svg')%>" alt="Крестик"
           class="popup__img-close-btn"></button>
     </div>
   </div>
-  <div class="popup popup_type_place-image">
+
+
+    <div class="popup popup_type_place-image">
     <div class="popup__container popup__container_image">
       <img src="#" alt="" class="popup__image">
       <h2 class="popup__image-title"></h2>
@@ -81,16 +93,42 @@
           class="popup__img-close-btn"></button>
     </div>
   </div>
+
+  <div class="popup popup_type_update-avatar">
+    <div class="popup__container">
+      <form class="popup__form form-avatar" name="popup-form-avatar" novalidate>
+        <h2 class="popup__title">Обновить аватар</h2>
+        <input id="avatar-input" class="popup__input popup__input_type_update" type="url" name="link" required
+        placeholder="Ссылка">
+        <span id="avatar-input-error" class="error"></span>
+        <button type="submit" class="popup__save-btn form__button" name="submit_btn" value="Сохранить">cохранить</button>
+      </form>
+      <button type="button" class="popup__close-btn"><img src="<%=require('./images/close_icon.svg')%>" alt="Крестик"
+        class="popup__img-close-btn"></button>
+    </div>
+  </div>
+
+  <div class="popup  popup_delete">
+    <div class="popup__container">
+      <form class="popup__form form-delete" name="popup-form-delete">
+        <h2 class="popup__title">Вы уверены?</h2>
+        <button type="submit" class="popup__save-btn popup__btn-delete " name="submit_btn" value="Подтвердить удаление">Да</button>
+      </form>
+    <button type="button" class="popup__close-btn"><img src="<%=require('./images/close_icon.svg')%>" alt="Крестик"
+      class="popup__img-close-btn"></button>
+    </div>
+
+  </div>
   <!--Template для создания карточек-->
-  <template id="templateCards">
+  <template id="template-cards">
     <li class="cards__item">
       <img src="#" alt="" class="cards__image">
       <div class="cards__description">
         <h2 class="cards__title"></h2>
-        <button type="button" class="cards__like-btn"></button>
+        <button type="button" class="cards__like-btn"><p class="cards__like-count"></p></button>
+        
       </div>
-      <button type="button" class="cards__remove-btn"><img src="<%=require('./images/Korzina.svg')%>" alt="Корзина"
-          class="cards__vector-korzina"></button>
+      <button type="button" class="cards__remove-btn" aria__like="Удалить изображение"></button>
     </li>
   </template>
 </body>

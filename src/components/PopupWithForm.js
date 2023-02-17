@@ -1,32 +1,46 @@
 import { Popup } from "../components/Popup.js";
 
 export class PopupWithForm extends Popup {
-    constructor(popupSelector, handleFormSubmit) {
-        super(popupSelector);
-        this._handleFormSubmit = handleFormSubmit;
-        this._form = this._popupElement.querySelector('.popup__form'); // находим элементы формы для того, чтобы в методе close сбросить все инпуты формы (сбросить форму)
-        this._inputList = this._popupElement.querySelectorAll('.popup__input'); // находим все элементы полей
-    }
-    _getInputValues() {
-        const formValues = {};
+  constructor({ popupSelector, handleFormSubmit }) {
+    super(popupSelector);
+    this._handleFormSubmit = handleFormSubmit;
+    this._form = this._popupElement.querySelector(".popup__form");
+    this._button = this._popupElement.querySelector(".popup__save-btn");
+    this._inputs = this._popupElement.querySelectorAll(".popup__input");
+  }
 
-        this._inputList.forEach(input => {
-            formValues[input.name] = input.value;
-        });
-        return formValues;
-    }
+  _getInputValues() {
+    this._formValues = {};
+    this._inputs.forEach((input) => {
+      this._formValues[input.name] = input.value;
+    });
+    return this._formValues;
+  }
 
-    setEventListeners() {
-        super.setEventListeners();
-        this._form.addEventListener('submit', (e) => {
-            e.preventDefault();
+  setInputValues(data) {
+    this._inputs.forEach((input) => {
+      input.value = data[input.name];
+    });
+  }
 
-            this._handleFormSubmit(this._getInputValues());
-        });
-    }
+  setEventListeners() {
+    this._form.addEventListener("submit", (evt) => {
+      evt.preventDefault();
+      this._handleFormSubmit(this._getInputValues());
+    });
+    super.setEventListeners();
+  }
 
-    close() {
-        super.close();
-        this._form.reset();
+  waitLoad(isReady) {
+    if (isReady) {
+      this._button.textContent = "Сохранение...";
+    } else {
+      this._button.textContent = "Сохранить";
     }
+  }
+
+  close() {
+    super.close();
+    this._form.reset();
+  }
 }
