@@ -18,8 +18,5 @@ export class PopupWithConfirmation extends Popup {
     this._handleConfirmDelete = submitConfirm;
   }
 
-  close() {
-    super.close();
-    this._form.reset();
-  }
+
 }

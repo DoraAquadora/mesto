@@ -54,7 +54,7 @@ generateCard = () => {
     });
 
     this._cardImg.addEventListener('click', () => {
-      this._handleCardClick(this._title, this._imageLink);
+      this._handleCardClick(this._text, this._imageLink);//title
     });
   }
 
