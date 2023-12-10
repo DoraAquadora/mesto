@@ -23,10 +23,10 @@ export class Card {
     .content
     .querySelector('.cards__item')
     .cloneNode(true);
-    this._buttonLike = cardElement.querySelector(".cards__like-btn");//gg
-    this._cardImg = cardElement.querySelector(".cards__image");//gg
-    this._delete = cardElement.querySelector(".cards__remove-btn");//gg
-    this._likeCounter = cardElement.querySelector(".cards__like-count");//gg
+    this._buttonLike = cardElement.querySelector(".cards__like-btn");
+    this._cardImg = cardElement.querySelector(".cards__image");
+    this._delete = cardElement.querySelector(".cards__remove-btn");
+    this._likeCounter = cardElement.querySelector(".cards__like-count");
 
     return cardElement;
   }

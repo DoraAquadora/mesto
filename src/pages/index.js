@@ -1,13 +1,13 @@
 import './../pages/index.css';
-import {Api} from '../components/Api.js'//ll
-import { validate } from '../utils/validate.js';//ll
-import { Card } from '../components/Card.js';//ll
-import { FormValidator } from '../components/FormValidator.js';//ll
-import { Section } from '../components/Section.js';//ll
-import { PopupWithImage } from '../components/PopupWithImage.js';//ll
-import { PopupWithForm } from '../components/PopupWithForm.js';//ll
-import { PopupWithConfirmation} from '../components/PopupWithConfirmation.js'//ll
-import { UserInfo } from '../components/UserInfo.js';//ll
+import {Api} from '../components/Api.js'
+import { validate } from '../utils/validate.js';
+import { Card } from '../components/Card.js';
+import { FormValidator } from '../components/FormValidator.js';
+import { Section } from '../components/Section.js';
+import { PopupWithImage } from '../components/PopupWithImage.js';
+import { PopupWithForm } from '../components/PopupWithForm.js';
+import { PopupWithConfirmation} from '../components/PopupWithConfirmation.js'
+import { UserInfo } from '../components/UserInfo.js';
 import {  profileName,
   profileJob,
   cardsElementList,
